@@ -17,7 +17,9 @@ define('WIDTH_H2', 60);
  */
 // on type explicitement les paramètres ici pour voir s'il y a un comportement différent
 // TODO : écrire la fonction somme, et surtout comprendre les résultats
-
+function somme(int $a, int $b):int {
+    return $a + $b;
+}
 
 // on ne type toujours pas les deux opérandes
 function test_somme($a, $b, String $titre = 'test somme')
@@ -27,7 +29,7 @@ function test_somme($a, $b, String $titre = 'test somme')
     $x = $a;
     $y = $b;
     // TODO : appeler la fonction somme sur $a et $b, stocker le résultat dans $r
-    $r = null;//todo ligne à supprimer, présente pour la compilation
+    $r = somme($a,$b);//todo ligne à supprimer, présente pour la compilation
     echo 'somme de :' . EOLn;
     echo '  - ' . $x . ' (' . gettype($x) . ')' . EOLn;
     echo '  - ' . $y . ' (' . gettype($y) . ')' . EOLn;

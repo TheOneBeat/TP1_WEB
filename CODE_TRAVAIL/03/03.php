@@ -25,6 +25,7 @@ define('WIDTH_H2', 60);
  */
 
 
+
 echo encadre('exo 3.3, existence', WIDTH_H1, 'left', '*', '*', '*');
 
 echo EOLn;
@@ -32,40 +33,70 @@ echo encadre('variable qui n\'existe pas', WIDTH_H2);
 // on ne déclare pas $v
 // TODO : utiliser isset, empty, is_null, ==, ===, et afficher valeur et type
 
+
+
+
+
 echo EOLn;
 echo encadre('$v = \'bonjour\'', WIDTH_H2);
 $v = 'bonjour';
 // TODO : copier-coller du premier TODO
 
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
+
 echo EOLn;
 echo encadre('$v = NULL', WIDTH_H2);
 $v = NULL;
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
+
 
 echo EOLn;
 echo encadre('$v = \'\'', WIDTH_H2);
 $v = '';
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
+
 
 echo EOLn;
 echo encadre('$v = 0', WIDTH_H2);
 $v = 0;
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
+
 
 echo EOLn;
 echo encadre('$v = 0.0', WIDTH_H2);
 $v = 0.0;
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
 
 echo EOLn;
 echo encadre('$v = []', WIDTH_H2);
 $v = [];
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . isset($v) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
 
 echo EOLn;
 echo encadre('unset($v)', WIDTH_H2);
 unset($v);
 // TODO : copier-coller du premier TODO
+echo 'isset($v)   : ' . boolToStr(isset($v)) . EOLn;
+echo 'empty($v)   : ' . empty($v) . EOLn;
+echo 'is_null($v) : ' . is_null($v) . EOLn;
+
 
 
 

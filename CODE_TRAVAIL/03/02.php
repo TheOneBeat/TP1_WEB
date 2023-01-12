@@ -16,6 +16,19 @@ define('WIDTH_H2', 60);
  * @param $b : deuxième paramètre
  */
 // TODO : écrire la fonction comparer, et surtout comprendre les résultats
+
+function comparer($a, $b)
+{
+    echo $a ." ". gettype($a).'\n';
+    echo $b ." ". gettype($b).'\n';
+    $r = boolToStr($a == $b);
+
+    echo '$a==$b ' .$r;
+    $r = boolToStr($a === $b);
+    echo '$a===$b ' .$r;
+
+}
+
 // par exemple l'affichage produit par la fonction pourrait ressembler à :
 //   comparaison de :
 //     - 123 (integer)
@@ -24,12 +37,14 @@ define('WIDTH_H2', 60);
 //   === : true
 
 
+
 // de même on ne type pas les deux paramètres
 function test_comparaison($a, $b, String $titre = 'test comparaison')
 {
     echo EOLn;
     echo encadre($titre, WIDTH_H2);
     // TODO : appeler la fonction comparer sur $a et $b
+    comparer($a, $b);
 }
 
 

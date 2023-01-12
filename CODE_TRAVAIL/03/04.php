@@ -40,6 +40,14 @@
             <?php
                 // TODO : faire le même affichage, mais avec les balises
                 //        table, th, td, voire thead et tbody
+                <table>
+                    <thead>
+                    for ($i = 0; $i < 10; $i ++)
+                    {
+                        echo "tr> $i </tr>";
+
+                        afficheLigne($i);
+                    }
             ?>
         </div>
         

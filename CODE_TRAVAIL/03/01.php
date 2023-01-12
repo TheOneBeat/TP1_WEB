@@ -18,7 +18,9 @@ define('WIDTH_H2', 60);
 // on ne type pas les paramètres ici pour voir les conversions implicites
 // TODO : écrire la fonction somme, et surtout comprendre les résultats
 
-
+function somme(&$a, $b) {
+    return $a + $b;
+}
 // de même on ne type pas les deux opérandes
 function test_somme($a, $b, String $titre = 'test somme')
 {
@@ -27,24 +29,27 @@ function test_somme($a, $b, String $titre = 'test somme')
     $x = $a;
     $y = $b;
     // TODO : appeler la fonction somme sur $a et $b, stocker le résultat dans $r
-    $r = null;//todo ligne à supprimer, présente pour la compilation
+    $r = somme($a,$b);//todo ligne à supprimer, présente pour la compilation
     echo 'somme de :' . EOLn;
     echo '  - ' . $x . ' (' . gettype($x) . ')' . EOLn;
     echo '  - ' . $y . ' (' . gettype($y) . ')' . EOLn;
-    echo 'résultat :' . EOLn;
+    echo 'résultat :' . $r;
     echo '  - ' . $r . ' (' . gettype($r) . ')' . EOLn;
 }
 
 
 echo encadre('exo 3.1, opérateur +', WIDTH_H1, 'left', '*', '*', '*');
 
-test_somme(123, 654, 'deux entiers');
+echo test_somme(123, 654, 'deux entiers');
+
 
 echo EOLn;
 echo encadre('Pourquoi ne pas utiliser des prompts ?', WIDTH_H2);
 // TODO : écrire la réponse
 
-test_somme("123", "654", 'deux chaînes mais qui contiennent des entiers');
+echo "On ne peut pas utiliser des prompts parce que le prompt qui fonctionne comme un scanf fonctionne différemment sur un serveur";
+
+echo test_somme("123", "654", 'deux chaînes mais qui contiennent des entiers');
 //test_somme("123", "aaa", 'deux chaînes dont une avec que des lettres');
 test_somme("123", "1aaa", 'deux chaînes dont une commence avec des chiffres');
 //test_somme("aaa1", "123", 'deux chaînes dont une se termine avec des chiffres');
